@@ -7,30 +7,38 @@
            const tipoContacto = document.getElementById ("tipoContacto") .value;
            const asunto = document.getElementById ("asunto") .value;
            const descripcion = document.getElementById ("descripcion") .value;
-           const password = document.getElementById ("password") .value;
-          const confirmPassword = document.getElementById ("confirmPassword") .value;
-
+          
 // ---------------------------------------CAMPO OBLIGATORIO----------------------------
-          if (nombre == '' || apellido == '') {
-              document.getElementById ('error_nombre').innerHTML = 'El campo es obligatorio';
-              document.getElementById ('error_apellido').innerHTML = 'El campo es obligatorio';
-            } else {document.getElementById ('error_nombre').innerHTML = ' ';
-            }
-            
-             console.log (nombre, apellido, );
+             if (nombre == '' ) {
+                document.getElementById ('error_nombre').innerHTML = 'El campo es obligatorio';
+                document.getElementById ('error_apellido').innerHTML = 'El campo es obligatorio';
+                document.getElementById ('error_email').innerHTML = 'El campo es obligatorio';
+                document.getElementById ('error_asunto').innerHTML = 'El campo es obligatorio';
+                document.getElementById ('error_descripcion').innerHTML = 'El campo es obligatorio';
+             
+               } else {
+                 document.getElementById ('error_nombre').innerHTML = ' ';
+             }
+                console.log (nombre, apellido, telefono, email,tipoContacto,asunto, descripcion,);
 
-            } 
-// ----------------------------------------------------------------------------------
+               } 
+// ------------------------validar todos los campos----------------------------------------------------------
 
-    //   function validar(elemen){
-    //    const value = elemen.value;
-    //    const name = elemen.name;
-    //    if (value === ' '){
-    //      document.getElementById('error_' + name).innerHTML = 'El campo es obligatorio'
-    //  } else {
-    //      document.getElementById ('error_' + name).innerHTML = '';
-    //    }
-    //   }
+
+        function validar (elemento){
+         const value = elemento.value;
+         const name = elemento.name;
+
+         if (value === ' '){
+           document.getElementById('error_' + name).innerHTML = 'El campo es obligatorio'
+       } else {
+           document.getElementById ('error_' + name).innerHTML = '';
+         }
+        
+        } 
+
+
+
 
     //  ----------------------------------------------------------------
 //     const getMensaje = () => {
@@ -52,4 +60,4 @@
 // const registrarse =() => {
 //   getMensaje();
 
-// }
+  // }
