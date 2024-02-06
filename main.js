@@ -46,11 +46,11 @@
                 document.getElementById("mensaje").innerHTML = http.responseText;
       }
   }; 
-  http.open('GET', 'http://localhost/BACKAV/entrega_mod2_js/gracias.txt', true)
-  http.send()
+  http.open('GET', 'http://localhost/BACKAV/entrega_mod2_js/gracias.txt', true);
+  http.send();
   
   }
 const registrarse =() => {
-  getMensaje()
+  getMensaje();
 
 }
