@@ -1,27 +1,26 @@
 
-  //   function registrarse (){
-  //         const nombre = document.getElementById ("nombre") .value;
-  //         const apellido = document.getElementById ("apellido") .value;
-  //         const telefono = document.getElementById ("telefono") .value;
-  //         const email = document.getElementById ("email") .value;
-  //         const tipoContacto = document.getElementById ("tipoContacto") .value;
-  //         const asunto = document.getElementById ("asunto") .value;
-  //         const descripcion = document.getElementById ("descripcion") .value;
-  //         const password = document.getElementById ("password") .value;
-  //         const confirmPassword = document.getElementById ("confirmPassword") .value;
+     function registrarse (){
+           const nombre = document.getElementById ("nombre") .value;
+           const apellido = document.getElementById ("apellido") .value;
+           const telefono = document.getElementById ("telefono") .value;
+           const email = document.getElementById ("email") .value;
+           const tipoContacto = document.getElementById ("tipoContacto") .value;
+           const asunto = document.getElementById ("asunto") .value;
+           const descripcion = document.getElementById ("descripcion") .value;
+           const password = document.getElementById ("password") .value;
+          const confirmPassword = document.getElementById ("confirmPassword") .value;
 
-  // //     //  __________________________________________________________
-
-
-  //          if (nombre == '') {
-  //             document.getElementById ('error_nombre').innerHTML = 'El campo es obligatorio';
-  //          } else {document.getElementById ('error_nombre').innerHTML = '';
-  //          }
+// ---------------------------------------CAMPO OBLIGATORIO----------------------------
+          if (nombre == '' || apellido == '') {
+              document.getElementById ('error_nombre').innerHTML = 'El campo es obligatorio';
+              document.getElementById ('error_apellido').innerHTML = 'El campo es obligatorio';
+            } else {document.getElementById ('error_nombre').innerHTML = ' ';
+            }
             
-  //           console.log (nombre,apellido,telefono,email, tipoContacto, asunto, descripcion, password, confirmPassword);
+             console.log (nombre, apellido, );
 
-  //          } 
-
+            } 
+// ----------------------------------------------------------------------------------
 
     //   function validar(elemen){
     //    const value = elemen.value;
@@ -34,23 +33,23 @@
     //   }
 
     //  ----------------------------------------------------------------
-    const getMensaje = () => {
-      const http = new XMLHttpRequest();
-      http.onreadystatechange = () => {
-           console.log ("onreadystatechange");
-           console.log (http.readyState);
-           console.log (http.status);
+//     const getMensaje = () => {
+//       const http = new XMLHttpRequest();
+//       http.onreadystatechange = () => {
+//            console.log ("onreadystatechange");
+//            console.log (http.readyState);
+//            console.log (http.status);
                  
-           if (http.readyState == 4 && http.status == 200){
+//            if (http.readyState == 4 && http.status == 200){
                 
-                document.getElementById("mensaje").innerHTML = http.responseText;
-      }
-  }; 
-  http.open('GET', 'http://localhost/BACKAV/entrega_mod2_js/gracias.txt', true);
-  http.send();
+//                 document.getElementById("mensaje").innerHTML = http.responseText;
+//       }
+//   }; 
+//   http.open('GET', 'http://localhost/BACKAV/entrega_mod2_js/gracias.txt', true);
+//   http.send();
   
-  }
-const registrarse =() => {
-  getMensaje();
+//   }
+// const registrarse =() => {
+//   getMensaje();
 
-}
+// }
