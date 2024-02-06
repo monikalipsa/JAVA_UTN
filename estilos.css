@@ -7,13 +7,13 @@ body{
 .formulario{
     padding: 10rem;
     background-color: rgb(136, 5, 64);
-    width: 60vw;
+    width: 40vw;
     color: antiquewhite;
     padding: 30px 36px 28px 28px;
     margin-right: auto;
     margin-left: auto;
+    border: 3px solid white;
  
-    /* margin-left: 200px; */
     
 }
 
@@ -37,6 +37,7 @@ body{
     color: aliceblue;
     border-radius: unset;
     cursor: pointer;
+    
 }
 
 .input-field{
@@ -59,7 +60,7 @@ body{
 
 .descrip{
     padding: 30px;
-    width: 95%;
+    width: 92%;
 }
 
 .contraseña{
