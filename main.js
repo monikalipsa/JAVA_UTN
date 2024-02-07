@@ -24,20 +24,30 @@
                } 
 // ------------------------validar todos los campos----------------------------------------------------------
 
+function validar(elemento) {
+  const value = elemento.value.trim(); // trin: eliminar espacios en blanco al principio y al final
+  const name = elemento.name; // Obtener el nombre del elemento
 
-        function validar (elemento){
-         const value = elemento.value;
-         const name = elemento.name;
+  // Verificar si el campo está vacío
+  if (value === '') {
+      document.getElementById('error_' + name).innerHTML = 'El campo es obligatorio';
+  } else {
+      document.getElementById('error_' + name).innerHTML = ''; // Limpiar el mensaje de error
+  }
+}
 
-         if (value === ' '){
-           document.getElementById('error_' + name).innerHTML = 'El campo es obligatorio'
-       } else {
-           document.getElementById ('error_' + name).innerHTML = '';
-         }
-        
-        } 
+ //  -------------------------mail---------------------------------------
+ function validarEmail() {
+    const emailInput = document.getElementById('email');
+    const email = emailInput.value.trim();
+    const errorElement = document.getElementById('error_email');
 
-
+    if (!email.includes('@')) {
+        errorElement.textContent = 'El correo electrónico debe contener @';
+    } else {
+        errorElement.textContent = '';
+    }
+}
 
 
     //  ----------------------------------------------------------------

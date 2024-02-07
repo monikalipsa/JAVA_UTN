@@ -23,22 +23,25 @@
          </div>
          <div>
             <label for="telefono">Telefono</label>
-            <input type="text" id="telefono" name="telefono" class="input-field" onkeyup="validar (this)">
+            <input type="text" id="telefono" name="telefono" class="input-field" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" placeholder="11-1111-1111" onkeyup="validar (this)" >
             <div id="error_telefono" class="error-message"></div>
          </div>
+
+         
+
          <div>
             <label for="email">Email *</label>
-            <input type="text" id="email" name="email" class="input-field" onkeyup="validar (this)">
+            <input type="text" id="email" name="email" class="input-field" onkeyup="validar (this)"oninput="validarEmail()"><p id="error_email"></p>
             <div id="error_email" class="error-message"></div>
         </div>
         <div>
             <label for="tipoContacto">Tipo de contacto *</label>
-            <select id="tipoContacto" name= "tdecont"  class="tdecont" required>   
+            <div id="error_tipoContacto" class="error-message"></div>            
+            <select id="tipoContacto" name= "tipoContacto"  class="input-field" onkeyup="validar (this)" required>   
                 <option value="">Selecciona...</option>
                 <option value="Soporte">Soporte</option>
                 <option value="Ventas">Ventas</option>
             </select>
-            <div id="error_tipoContacto" class="error-message"></div>            
         </div> 
         
         <div>
