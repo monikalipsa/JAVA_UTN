@@ -21,10 +21,13 @@ function registrarse (){
      }
         console.log (nombre, apellido, telefono, email,tipoContacto,asunto, descripcion,);
        }
+
+
+       
        // validar campos
        function validar(elemento) {
         const value = elemento.value.trim(); 
-        const name = elemento.name; 
+        const name = elemento.name.trim(); 
         
         if (value === '') {
             document.getElementById('error_' + name).innerHTML = 'El campo es obligatorio';
