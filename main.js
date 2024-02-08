@@ -41,26 +41,26 @@ function registrarse (){
     
     
 
-//----------------------------aiax, mensaje------------------------------
+//----------------------------ajax, mensaje------------------------------
+const getMensaje = ()=> {
+    const http = new XMLHttpRequest();
+    http.onreadystatechange = () =>{
+        console.log ("onreadystatechange");
+        console.log (http.readyState);
+        console.log (http.status);
 
-// const getMensaje = () => {
-//     const http = new XMLHttpRequest();
-//     http.onreadystatechange = () => {
-//         console.log("onreadystatechange");
-//         console.log(http.readyState);
-//         console.log(http.status);
+        if (http.readyState == 4 && http.status == 200) {
+            const mensaje = http.responseText;
+            document.getElementById ("mensaje").innerHTML = http.responseText;
+        }
+    };
+    // configurar requeuest
+    http.open('GET', 'http://localhost/backav/js_ajax/gracias.txt', true);
+    http.send();
+}
+registrarse= ()=>{
+    getMensaje();
 
-//         //solicitud y estado
-//         if (http.readyState == 4 && http.status == 200) {
-//             //actualiza contenido
-//             document.getElementById ("mensaje").innerHTML = http.responseText;
-//         }
-//     };
+};
 
-//     http.open('GET', 'http://localhost/backav/js_ajax/gracias.txt', true);
-//     http.send();
-// }
-// const registrarse() = () =>{
-//     getMensaje()
 
-// }
