@@ -50,24 +50,25 @@ function validar(elemento) {
 }
 
 
-    //  ----------------------------------------------------------------
-//     const getMensaje = () => {
-//       const http = new XMLHttpRequest();
-//       http.onreadystatechange = () => {
-//            console.log ("onreadystatechange");
-//            console.log (http.readyState);
-//            console.log (http.status);
+    //  --------------------------Ajax--------------------------------------
+     const getMensaje = () => {
+       const http = new XMLHttpRequest();
+       http.onreadystatechange = () => {
+            console.log ("onreadystatechange ");
+            console.log (http.readyState);
+            console.log (http.status);
+            //verificacion y estado
                  
-//            if (http.readyState == 4 && http.status == 200){
-                
-//                 document.getElementById("mensaje").innerHTML = http.responseText;
-//       }
-//   }; 
-//   http.open('GET', 'http://localhost/BACKAV/entrega_mod2_js/gracias.txt', true);
-//   http.send();
+            if (http.readyState == 4 && http.status == 200){
+                // actualizacion html
+                 document.getElementById("mensaje").innerHTML = http.responseText;
+       }
+   }; 
+      http.open('GET', 'http://localhost/BACKAV/entrega_mod2_js/gracias.txt', true)
+      http.send();
   
-//   }
-// const registrarse =() => {
-//   getMensaje();
+   }
+       const registrarse = () => {
+       getMensaje();
 
-  // }
+   }
