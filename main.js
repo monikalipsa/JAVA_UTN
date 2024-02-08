@@ -37,38 +37,89 @@ function validar(elemento) {
 }
 
  //  -------------------------mail---------------------------------------
- function validarEmail() {
-    const emailInput = document.getElementById('email');
-    const email = emailInput.value.trim();
-    const errorElement = document.getElementById('error_email');
+//  function validarEmail() {
+//     const emailInput = document.getElementById('email');
+//     const email = emailInput.value.trim();
+//     const errorElement = document.getElementById('error_email');
 
-    if (!email.includes('@')) {
-        errorElement.textContent = 'El correo electrónico debe contener @';
-    } else {
-        errorElement.textContent = '';
-    }
-}
+//     if (!email.includes('@')) {
+//         errorElement.textContent = 'El correo electrónico debe contener @';
+//     } else {
+//         errorElement.textContent = '';
+//     }
+// }
 
 
     //  --------------------------Ajax--------------------------------------
-     const getMensaje = () => {
-       const http = new XMLHttpRequest();
-       http.onreadystatechange = () => {
-            console.log ("onreadystatechange ");
-            console.log (http.readyState);
-            console.log (http.status);
-            //verificacion y estado
-                 
-            if (http.readyState == 4 && http.status == 200){
-                // actualizacion html
-                 document.getElementById("mensaje").innerHTML = http.responseText;
-       }
-   }; 
-      http.open('GET', 'http://localhost/BACKAV/entrega_mod2_js/gracias.txt', true)
-      http.send();
+  //   const getMensaje = () => {
+  //      const http = new XMLHttpRequest();
+  //      http.onreadystatechange = () => {
+  //          console.log("onreadystatechange");
+  //          console.log(http.readyState);
+  //          console.log(http.status);
   
-   }
-       const registrarse = () => {
-       getMensaje();
+  //          if (http.readyState == 4 && http.status == 200) {
+  //              document.getElementById("mensaje").innerHTML = http.responseText;
+  //          }
+  //      };
+  
+  //      http.open('GET', 'http://localhost/backav/entrega_mod2_js/form.html/gracias.txt', true);
+  //      http.send();
+  //  };
+  
 
-   }
+  //  getMensaje();
+
+  // -----------------------------------------------------------------------------
+
+  //  const getMensaje = () => {
+  //   const url = 'http://localhost/backav/entrega_mod2_js/gracias.txt';
+  //    const http = new XMLHttpRequest();
+  //    http.onreadystatechange = () => {
+  //      if (http.readyState == 4 && http.status == 200) {
+  //        document.getElementById("mensaje").innerHTML = http.responseText;
+  //      }
+  //    };
+  //    http.open('GET', url, true);
+  //    http.send();
+  //  };
+   // -----------------------------------------------------------------------------
+
+//     function ajax () {
+//      const http = new XMLHttpRequest();
+//      const url = 'http://localhost/backav/entrega_mod2_js/form.html';
+//      http.onreadystatechange = function() {
+//        if (this.readyState == 4 && http.status == 200) {
+//              console.log (this.responseText);
+//              document.getElementById("mensaje").innerHTML = this.responseText;
+//      }
+//     }
+//     http.open('GET', url, true);
+//     http.send(); 
+//  }
+//   document.getElementById("submit").addEventListener("click", function(){
+//      ajax();
+//    });
+  
+  
+//    innerHTML = http.responseText;
+// ___________________________________________________________
+const getMensaje = () => {
+  const url = 'http://localhost/backav/entrega_mod2_js/gracias.txt';
+  const http = new XMLHttpRequest();
+  
+  http.onreadystatechange = () => {
+      if (http.readyState == 4 && http.status == 200) {
+          document.getElementById("mensaje").innerHTML = http.responseText;
+      }
+  };
+  
+  http.open('GET', url, true);
+  http.send();
+};
+
+document.getElementById("submit").addEventListener("click", function(){
+  getMensaje();
+});
+
+

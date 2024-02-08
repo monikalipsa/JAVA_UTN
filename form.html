@@ -23,7 +23,7 @@
          </div>
          <div>
             <label for="telefono">Telefono</label>
-            <input type="text" id="telefono" name="telefono" class="input-field" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" placeholder="11-1111-1111" onkeyup="validar (this)" >
+            <input type="text" id="telefono" name="telefono" class="input-field"  onkeyup="validar (this)" >
             <div id="error_telefono" class="error-message"></div>
          </div>
 
@@ -31,7 +31,7 @@
 
          <div>
             <label for="email">Email *</label>
-            <input type="text" id="email" name="email" class="input-field" onkeyup="validar (this)"oninput="validarEmail()"><p id="error_email"></p>
+            <input type="email" id="email" name="email" class="input-field" onkeyup="validar (this)">
             <div id="error_email" class="error-message"></div>
         </div>
         <div>
@@ -46,17 +46,17 @@
         
         <div>
             <label for="asunto">Asunto *</label>
-            <input type="text" id="asunto" name="asunto" class="input-field" onkeyup="validar (this)">
+            <input type="text" id="asunto" name="asunto" class="input-field"  onkeyup="validar (this)">
             <div id="error_asunto" class="error-message"></div>
          </div>
         <div>
-            <label for="descripcion">Descripción *</label>
-            <textarea id="descripcion" name="descripcion" class="input-field" rows="5" cols="30"v onkeyup="validar(this)"></textarea>
+            <label for="descripcion">Mensaje *</label>
+            <textarea id="descripcion" name="descripcion" class="input-field" rows="5" cols="30"  onkeyup="validar(this)"></textarea>
             <div id="error_descripcion" class="error-message"></div>
         </div> 
         
 
-            <button type="submit" class="submit-button" onclick= "registrarse()">Registrarse</button>
+            <button type="submit" id="submit" class="submit-button" onclick= "registrarse()">Enviar</button>
         </form>
         <!-- _________________________FORMULARIO_________________________________________________________  -->
 
