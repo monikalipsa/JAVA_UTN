@@ -1,5 +1,6 @@
+
 function registrarse() {
-    // Obtener los valores de los campos del formulario
+
     const nombre = document.getElementById("nombre").value;
     const apellido = document.getElementById("apellido").value;
     const telefono = document.getElementById("telefono").value;
@@ -8,9 +9,9 @@ function registrarse() {
     const asunto = document.getElementById("asunto").value;
     const descripcion = document.getElementById("descripcion").value;
 
-    // Verificar si todos los campos obligatorios están completos
+
     if (nombre === '' || apellido === '' || email === '' || asunto === '' || descripcion === '') {
-        // Mostrar mensajes de error para campos obligatorios no completados
+      
         document.getElementById('error_nombre').innerHTML = 'El campo es obligatorio';
         document.getElementById('error_apellido').innerHTML = 'El campo es obligatorio';
         document.getElementById('error_email').innerHTML = 'El campo es obligatorio';
@@ -41,16 +42,20 @@ function validar(elemento) {
     }
 }
 
-// Función para obtener el mensaje de texto
+
+
+
+// txt
 const getMensaje = () => {
     const http = new XMLHttpRequest();
     http.onreadystatechange = () => {
         if (http.readyState == 4 && http.status == 200) {
             document.getElementById("mensaje").innerHTML = http.responseText;
-        }
+        } 
     };
 
-    // Configurar la solicitud para obtener el mensaje de texto
+    // txt-------------------------------------------------
     http.open('GET', 'http://localhost/backav/js_ajax/gracias.txt', true);
     http.send();
+    
 }
