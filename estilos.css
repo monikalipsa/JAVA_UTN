@@ -34,7 +34,7 @@ body{
 .submit-button{
     padding: 10px 20px;
     background-color: rgb(6, 129, 123);
-    color: aliceblue;
+    color: rgb(238, 239, 241);
     border-radius: unset;
     cursor: pointer;
     
