@@ -5,7 +5,7 @@
    }
    body {
         background-size: cover;
-        max-width: 1200px;
+        width: 100%;
         margin: 0 auto;
         padding: 0;
         font-family: Arial, sans-serif;
@@ -16,7 +16,7 @@
 
 }
 .nav_principal{
-    max-width: 1200px;
+  width: 100%;
     align-items: center;
     background-color: #3f0b32;
     border-style: outset;
@@ -64,8 +64,10 @@
 }
 
 img{
-  width: 600px;
-  height: 500px;
+  /* width: 600px;
+  height: 500px; */
+  max-width: 100%;
+  height: auto;
   border-color: #3f0b32;
   border-width: 4px;
   border-style:outset;
@@ -89,7 +91,7 @@ img{
 
 /* -------------------footer-------------------------- */
 footer {
-    max-width: 1200px;
+  width: 100%;
     display: flex;
     margin-top: 100px;
     background-color: #3f0b32;
@@ -132,11 +134,19 @@ footer {
   }
   .redes-sociales img{
     display: flex;
+    margin-left: 20px;
     width: 30px; 
     height: 30px; 
     background-color: #ce9595;
    
 
+  }
+
+  footer{
+    height: 100px;
+  }
+  footer p{
+    margin-left: 80px;
   }
   
 
