@@ -4,23 +4,28 @@ body{
     margin: 20px;
 }
 
+label{
+  color: aliceblue;
+}
+
 .formulario{
-    padding: 10rem;
-    background-color: rgb(136, 5, 64);
+    background:url(img/form.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    background-position: center;
+    padding:30px 33px 67px;
+    border-top:6px solid rgb(76, 3, 3);
+    box-shadow: 0px 35px 44px -22px rgba(0, 0, 0, 0.72);
     width: 40vw;
-    color: antiquewhite;
-    padding: 30px 36px 28px 28px;
     margin-right: auto;
     margin-left: auto;
-    border: 3px solid white;
- 
-    
+   
 }
 
 .input-field {
     width: 100%;
     padding: 5px;
     margin-bottom: 10px;
+   
 
 }
 
@@ -43,6 +48,7 @@ body{
 .input-field{
     padding: 5px;
     margin-right: 10px;
+
 }
 
 .tdecont{
@@ -50,6 +56,7 @@ body{
     margin-right: 10px;
     width: 50%;
     margin-bottom: 10px;
+    color: antiquewhite;
 }
 .asunto {
     padding: 5px;
@@ -61,6 +68,7 @@ body{
 .descrip{
     padding: 30px;
     width: 92%;
+ 
 }
 
 .contraseña{
@@ -71,5 +79,8 @@ body{
 }
 
 .mensaje{
-    color: blue;
+    background-color: rgb(135, 232, 232);
+    margin-top: 50px;
+    color: rgb(61, 2, 2);
+    
 }
