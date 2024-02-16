@@ -88,3 +88,17 @@ label{
     padding: 10px;
     font-size: 22px;
 }
+
+@media only screen and (max-width: 600px) {
+    .formulario {
+        padding: 10px;
+    }
+
+    .input-field {
+        width: 100%;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}
