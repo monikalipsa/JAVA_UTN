@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById('form_contacto');
-    const mensajeDiv = document.getElementById('mensaje');
+    const formulario = document.getElementById('form_contacto');
+    const mje = document.getElementById('mensaje');
 
     const validarCampo = (elemento) => {
-        const valorCampo = elemento.value.trim();
-        const mensajeError = document.getElementById('error_' + elemento.id);
+        const campo = elemento.value.trim();
+        const error = document.getElementById('error_' + elemento.id);
 
-        if (!valorCampo) {
-            mensajeError.innerText = 'Este campo es obligatorio';
+        if (!campo) {
+            error.innerText = 'Este campo es obligatorio';
             elemento.classList.add('error');
             return false;
         } else {
-            mensajeError.innerText = '';
+            error.innerText = '';
             elemento.classList.remove('error');
             return true;
         }
@@ -30,17 +30,20 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!camposIncompletos) {
             enviarFormulario();
         } else {
-            document.getElementById('camposObligatorios').innerText = 'Campos obligatorios no completados';
+            document.getElementById('camposObligatorios').innerText = 'Campos obligatorios incompletos';
         }
     };
+    document.getElementById('enviarBtn').addEventListener('click', function() {
+        document.getElementById('camposObligatorios').innerText = '';
+    });
 
     const enviarFormulario = () => {
-        // Simular la solicitud AJAX para cargar el mensaje desde el archivo mensaje.txt
+//-----------------------------mje txt------------------------------------------------
         const xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
-                    mensajeDiv.innerText = xhr.responseText;
+                    mje.innerText = xhr.responseText;
                     resetearFormulario();
                 } else {
                     console.error('Error al cargar mensaje.txt');
@@ -54,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
 
     const resetearFormulario = () => {
-        form.reset();
+        formulario.reset();
     };
 
     document.getElementById('enviarBtn').addEventListener('click', validarFormulario);

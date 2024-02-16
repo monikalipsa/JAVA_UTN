@@ -6,33 +6,35 @@
     <title>Formulario AJAX</title>
 <link rel="stylesheet" href="estilos.css">
 </head>
+
+
 <body>
 
 
     <section class="formulario">
-        <form action="#" name="form_contacto" id="form_contacto">
+        <form action=" " name="form_contacto" id="form_contacto">
             <div>
-                <label for="nombre">Nombre </label>
+                <label for="nombre">Nombre : </label>
                 <input type="text" id="nombre" name="nombre" class="input-field">
                 <div id="error_nombre" class="error-message"></div>
             </div>
             <div>
-                <label for="apellido">Apellido </label>
+                <label for="apellido">Apellido : </label>
                 <input type="text" id="apellido" name="apellido" class="input-field">
                 <div id="error_apellido" class="error-message"></div>
             </div>
             <div>
-                <label for="telefono">Teléfono</label>
+                <label for="telefono">Teléfono :</label>
                 <input type="tel" id="telefono" name="telefono" class="input-field" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                 
             </div>
             <div>
-                <label for="email">Email </label>
+                <label for="email">Email :</label>
                 <input type="text" id="email" name="email" class="input-field">
                 <div id="error_email" class="error-message"></div>
             </div>
             <div>
-                <label for="tipoContacto">Tipo de contacto </label>
+                <label for="tipoContacto">Tipo de contacto :</label>
                 <select id="tipoContacto" name="tipoContacto" class="input-field">
                     <option value="soporte">Soporte</option>
                     <option value="ventas">Ventas</option>
@@ -40,13 +42,13 @@
                 <div id="error_tipoContacto" class="error-message"></div>
             </div>
             <div>
-                <label for="asunto">Asunto </label>
+                <label for="asunto">Asunto :</label>
                 <input type="text" id="asunto" name="asunto" class="input-field">
                 <div id="error_asunto" class="error-message"></div>
             </div>
             <div>
-                <label for="descripcion">Descripción </label>
-                <textarea id="descripcion" name="descripcion" class="input-field"></textarea>
+                <label for="descripcion">Descripción :</label>
+                <textarea id="descripcion" name="descripcion" class="input-field" rows="5" cols="30" ></textarea>
                 <div id="error_descripcion" class="error-message"></div>
             </div>
             <div id="camposObligatorios" class="error-message"></div>
